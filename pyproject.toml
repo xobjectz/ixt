@@ -1,0 +1,54 @@
+[build-system]
+requires = [
+    "setuptools>=43.0.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "ixt"
+description = "inter exchange terminal"
+version = "1"
+authors = [
+    {name = "xobjectz", email = "objx@proton.me"},
+]
+readme = "README.rst"
+license = {text="Public Domain"}
+classifiers = [ 
+    'Development Status :: 3 - Alpha',
+    'License :: Public Domain',
+    'Operating System :: Unix',
+    'Programming Language :: Python',
+    'Topic :: Utilities'
+]
+
+
+[project.scripts]
+"ixt" = "ixt.__main__:wrapped"
+
+[project.urls]
+"home" = "https://pypi.org/project/ixt"
+"bugs" = "https://github.com/xobjectz/ixt/issues"
+"source" = "https://github.com/xobjectz/ixt"
+
+
+[tool.setuptools]
+packages = [
+    'ixt',
+    'ixt.modules',
+    'ixt.user'
+]
+zip-safe=true
+
+
+[tool.setuptools.data-files]
+"share/doc/ixt" = [
+    "README.rst",
+]
+[tool.setuptools.exclude-package-data]
+"*" = [
+       "env*",
+       "html*",
+       "test*"
+      ]

@@ -1,0 +1,7 @@
+grep -R tix tix
+grep -R "print(" tix bin/tinder
+grep -R __import__ tix bin/tinder
+grep -R importlib tix bin/tinder
+grep -R "import sys" tix bin/tinder
+#grep -R sys tix bin/tinder
+#grep -R "import os" tix bin/tinder
